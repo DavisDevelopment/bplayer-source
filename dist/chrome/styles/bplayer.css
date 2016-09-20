@@ -1,0 +1,97 @@
+body .playlist {
+  font-family: Ubuntu;
+}
+body .playlist .track {
+  display: block;
+  padding: 5px;
+  background-color: #F6F6F6;
+  cursor: pointer;
+}
+body .playlist .track.even {
+  background-color: white;
+}
+body .playlist .track.active,
+body .playlist .track.selected {
+  background-color: #F27A48;
+}
+body .playlist .track span {
+  font-weight: bold;
+  font-size: 120%;
+}
+body .playlist .track .duration {
+  float: right;
+}
+body .gallery-main {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  background-color: #222222;
+}
+body .gallery-main .gallery-row {
+  width: 100%;
+  margin-top: 20px;
+  /*
+			.gallery-block:hover {
+				.title {
+					overflow: visible;
+				}
+			}
+			*/
+}
+body .gallery-main .gallery-row .gallery-block {
+  background-color: #363636;
+  max-width: 220px;
+  /*max-height: @blockSize;*/
+  font-family: UbuntuLight;
+  font-size: 10pt;
+  color: white;
+  padding: 5px;
+  cursor: pointer;
+}
+body .gallery-main .gallery-row .gallery-block img.thumb {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /*background-color: lighten(@color1, 20%);*/
+  width: 155px;
+  height: 150px;
+  outline: solid #000000 1px;
+}
+body .gallery-main .gallery-row .gallery-block .title {
+  /*display: block;*/
+  margin: 0px;
+  padding: 0px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  max-height: 18px;
+  overflow: hidden;
+  margin-top: 12px;
+}
+body .gallery-main .gallery-row .gallery-block.selected {
+  background-color: #F27A48;
+}
+body .gallery-main .gallery-row .gallery-block.selected .title {
+  color: #222222;
+}
+.context-menu {
+  display: block;
+  position: absolute;
+  z-index: 999999;
+  margin: 0px;
+  padding: 0px;
+  background-color: white;
+  border: solid black 1px;
+}
+.context-menu .context-menu-item {
+  display: block;
+  width: 100%;
+  margin: 0px;
+  padding: 7px;
+  line-height: 20px;
+  cursor: pointer;
+  background-color: white;
+}
+.context-menu .context-menu-item:hover {
+  background-color: #EEEEEE;
+}

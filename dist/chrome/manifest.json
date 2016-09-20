@@ -1,0 +1,48 @@
+{
+	"name" : "BPlayer",
+	"short_name" : "BPlayer",
+	"description" : "Chrome Media Player",
+	"version" : "2.0.1",
+	"manifest_version" : 2,
+	"content_security_policy" : "img-src 'self'; object-src 'self'",
+	"offline_enabled": true,
+	"app" : {
+		"background" : {
+			"scripts" : ["scripts/background.js"]
+		}
+	},
+	"icons" : {
+	    "128": "assets/icon128.png",
+	    "64" : "assets/icon64.png",
+		"16" : "assets/icon16.png",
+		"32" : "assets/icon32.png"
+	},
+	"file_handlers" : {
+	    "media_file" : {
+	        "types": [
+	            "video/*",
+	            "audio/*"
+	        ],
+	        "extensions": [
+	            "mov"
+	        ]
+	    },
+	    "other" : {
+	        "extensions": ["*"],
+	        "include_directories": true
+	    }
+	},
+	"permissions": [
+		"storage",
+		"notifications",
+		"clipboardRead",
+		"clipboardWrite",
+		"fileBrowserHandler",
+		{"fileSystem": [
+		    "retainEntries",
+		    "write",
+		    "directory"
+		]},
+		"fullscreen"
+	]
+}

@@ -1,0 +1,120 @@
+
+@color1: #222222;
+@color2: #F27A48;
+
+body {
+	.playlist {
+		font-family: Ubuntu;
+
+		.track {
+			display: block;
+			padding: 5px;
+			background-color: #F6F6F6;
+			cursor: pointer;
+
+			&.even {
+				background-color: white;
+			}
+			&.active, &.selected {
+				background-color: @color2;
+			}
+
+			span {
+				font-weight: bold;
+				font-size: 120%;
+			}
+
+			.duration {
+				float: right;
+			}
+		}
+	}
+
+	.gallery-main {
+		width: 100%;
+		margin: 0px;
+		padding: 0px;
+		@blockSize: 160px;
+		background-color: @color1;
+
+		.gallery-row {
+			width: 100%;
+			margin-top: 20px;
+
+			.gallery-block {
+				background-color: lighten(@color1, 8%);
+				max-width: (@blockSize + 60px);
+				/*max-height: @blockSize;*/
+				font-family: UbuntuLight;
+				font-size: 10pt;
+				color: white;
+				padding: 5px;
+				cursor: pointer;
+
+				img.thumb {
+					display: block;
+					margin-left: auto;
+					margin-right: auto;
+					
+					/*background-color: lighten(@color1, 20%);*/
+					width: (@blockSize - 5px);
+					height: (@blockSize - 10px);
+
+					outline: solid darken(@color1, 20%) 1px;
+				}
+
+				.title {
+					/*display: block;*/
+					margin: 0px;
+					padding: 0px;
+					display: -webkit-box;
+					-webkit-line-clamp: 1;
+					-webkit-box-orient: vertical;
+					max-height: 18px;
+					overflow: hidden;
+					margin-top: 12px;
+				}
+
+				&.selected {
+					background-color: @color2;
+
+					.title {
+						color: @color1;
+					}
+				}
+			}
+
+			/*
+			.gallery-block:hover {
+				.title {
+					overflow: visible;
+				}
+			}
+			*/
+		}
+	}
+}
+
+.context-menu {
+	display: block;
+	position: absolute;
+	z-index: 999999;
+	margin: 0px;
+	padding: 0px;
+	background-color: white;
+	border: solid black 1px;
+
+	.context-menu-item {
+		display: block;
+		width: 100%;
+		margin: 0px;
+		padding: 7px;
+		line-height: 20px;
+		cursor: pointer;
+		background-color: white;
+
+		&:hover {
+			background-color: #EEEEEE;
+		}
+	}
+}

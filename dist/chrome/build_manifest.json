@@ -1,0 +1,6 @@
+{
+	"coffeescript": [
+		"utils.coffee"
+	],
+	"concatenate": []
+}

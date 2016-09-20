@@ -1,0 +1,8 @@
+﻿<config>
+    <build type="development" />
+    <style>
+    theme {
+        colors: #F00 #0F0 #00F;
+    }
+    </style>
+</config>
