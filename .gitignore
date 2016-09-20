@@ -10,3 +10,5 @@ src/vex/
 src/smith/
 src/ida/
 
+dist/builds/
+
