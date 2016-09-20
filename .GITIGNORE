@@ -1,0 +1,6 @@
+
+*.crx
+*.pem
+*.swp
+
+src/foundation

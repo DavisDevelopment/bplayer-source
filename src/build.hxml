@@ -1,0 +1,28 @@
+
+-cp tannus/
+-cp gryffin/
+-cp foundation/src/
+-cp crayon/
+-cp vex/
+-cp ida/
+-cp smith/
+
+-D development
+-D analyzer
+-D tannus
+-D gryffin
+-D foundation
+-D vex
+-D chromeapp
+
+-lib slambda
+
+--each
+
+-main Background
+-js ../dist/chrome/scripts/background.js
+
+--next
+
+-main BPlayer
+-js ../dist/chrome/scripts/bplayer.js
