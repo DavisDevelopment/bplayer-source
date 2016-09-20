@@ -1,0 +1,12 @@
+
+*.crx
+*.pem
+*.swp
+
+src/foundation/
+src/gryffin/
+src/tannus/
+src/vex/
+src/smith/
+src/ida/
+
